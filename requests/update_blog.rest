@@ -1,0 +1,9 @@
+PUT http://localhost:3003/api/blogs/5c07f7f4ef297f28ee76e831
+content-type: application/json
+
+{
+    "title": "kolmaks paras blogi",
+    "author": "Juha Ritakoski",
+    "url": "JuhaBlogikoski.com",
+    "likes": 1
+}
