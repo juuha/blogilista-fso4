@@ -1,8 +1,9 @@
 POST http://localhost:3003/api/blogs
 content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Ikp1dXNlcm5laW0iLCJpZCI6IjVjMGE1NGUzNWI4MjgzM2M2NmE4NTM2OCIsImlhdCI6MTU0NDE4NjI4NX0.9fXAWxdcG-dDM7fMCLDZmiR_mgQ-TEoOb_SaDp8vMTQ
 
 {
-  "title": "kolmaks paras blogi",
+  "title": "neljänneks paras blogi",
   "author": "Juha Ritakoski",
   "url": "JuhaBlogikoski.com",
   "likes": 40000000

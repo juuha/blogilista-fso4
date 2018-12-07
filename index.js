@@ -4,7 +4,10 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const mongoose = require('mongoose')
+const middleware = require('./utils/middleware')
 const blogsRouter = require('./controllers/blogs')
+const usersRouter = require('./controllers/users')
+const loginRouter = require('./controllers/login')
 const config =require('./utils/config')
 
 if (process.env.NODE_ENV !== 'production'){
@@ -22,8 +25,11 @@ mongoose
 
 app.use(cors())
 app.use(bodyParser.json())
+app.use(middleware.tokenExtractor)
 
 app.use('/api/blogs', blogsRouter)
+app.use('/api/users', usersRouter)
+app.use('/api/login', loginRouter)
 
 const server = http.createServer(app)
 
